@@ -4,10 +4,7 @@
         default-active="2"
         class="el-menu-vertical-demo"
         @open="handleOpen"
-        @close="handleClose"
-        background-color="#545c64"
-        text-color="#fff"
-        active-text-color="#ffd04b">
+        @close="handleClose">
         <el-menu-item index="3">
           <i class="el-icon-document"></i>
           <span slot="title">导航三</span>

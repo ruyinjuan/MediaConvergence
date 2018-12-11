@@ -4,18 +4,13 @@
         default-active="2"
         class="el-menu-vertical-demo"
         @open="handleOpen"
-        @close="handleClose"
-        background-color="#545c64"
-        text-color="#fff"
-        active-text-color="#ffd04b">
+        @close="handleClose">
         <el-submenu index="1">
           <template slot="title">
             <i class="el-icon-location"></i>
             <span>导航一</span>
           </template>
-          <el-menu-item index="1-1">
-            <router-link class="item" tag="li" :to="{name:'home'}">首页</router-link>
-          </el-menu-item>
+          <el-menu-item index="1-1">融媒传播力</el-menu-item>
         </el-submenu>
         <el-submenu index="5">
           <template slot="title">

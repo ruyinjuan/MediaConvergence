@@ -76,5 +76,7 @@ export default {
   }
   .el-main {
     color: #333;
+    min-width:1166px;
+    overflow:auto;
   }
 </style>

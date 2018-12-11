@@ -10,6 +10,8 @@ body, html {
   line-height: 1.5;
   font-size: $fz-sm;
   color: $cl-txt;
+  min-width:1366px;
+  overflow:auto;
 }
 
 // 多选框样式 兼容性 IE9+

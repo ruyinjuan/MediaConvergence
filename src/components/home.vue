@@ -4,10 +4,7 @@
         default-active="2"
         class="el-menu-vertical-demo"
         @open="handleOpen"
-        @close="handleClose"
-        background-color="#545c64"
-        text-color="#fff"
-        active-text-color="#ffd04b">
+        @close="handleClose">
         <el-submenu index="1">
           <template slot="title">
             <i class="el-icon-location"></i>
@@ -73,29 +70,5 @@
 <style lang="scss" scoped>
   @import "~assets/css/lib-variable";
   @import "~assets/css/lib-mixin";
-  .header-wrap{
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #191a2c;
-    ul{
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      li{
-        color: $cl-txt;
-        height:56px;
-        line-height:56px;
-        padding: 0 20px;
-        cursor: pointer;
-        font-weight:bold;
-        &.active{
-          background:#262f50;
-          border-bottom:4px solid #2a578e;
-        }
-      }
-    }
-
-  }
 </style>
 

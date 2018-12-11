@@ -4,10 +4,7 @@
         default-active="2"
         class="el-menu-vertical-demo"
         @open="handleOpen"
-        @close="handleClose"
-        background-color="#545c64"
-        text-color="#fff"
-        active-text-color="#ffd04b">
+        @close="handleClose">
         <el-submenu index="5">
           <template slot="title">
             <i class="el-icon-location"></i>
