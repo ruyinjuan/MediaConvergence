@@ -47,3 +47,19 @@
   height:40px;
   line-height:40px;
 }
+.el-submenu .el-menu-item{
+  height:35px;
+  line-height:35px;
+}
+.el-main{
+  padding:0;
+}
+.el-menu.el-menu--horizontal {
+  border: 0;
+}
+.el-submenu.is-active .el-submenu__title {
+  background: linear-gradient(to right, #306fb5, #235285);
+}
+.el-submenu .el-menu {
+  margin: 5px 0;
+}
