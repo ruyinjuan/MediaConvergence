@@ -7,7 +7,7 @@
           <p><span>新闻中心融媒体平台</span></p>
         </div>
       </div>
-      <el-menu :default-active="activeIndex" class="menubox" mode="horizontal" @select="handleSelect">
+      <el-menu class="menubox" mode="horizontal" @select="handleSelect">
         <el-menu-item index="1">
           <router-link class="item" :to="{name:'home'}"><div v-on:click="toParent('home')">首页</div></router-link>
         </el-menu-item>

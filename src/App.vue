@@ -2,29 +2,15 @@
   <div id="app" ref="app" class="theme-red">
     <el-container>
       <el-header>
-        <HeaderWrap ref="HeaderWrap" v-on:fromChild="fromChild"></HeaderWrap>
+        <HeaderWrap ref="HeaderWrap"></HeaderWrap>
       </el-header>
-      <el-container>
-        <el-aside width="200px">
-          <component v-bind:is="menuName"></component>
-        </el-aside>
-        <el-main>
-          <router-view/>
-        </el-main>
-      </el-container>
+      <router-view/>
     </el-container>
   </div>
 </template>
 
 <script>
 import HeaderWrap from 'components/header.vue'
-import home from 'components/home.vue'
-import backstageManage from 'components/backstageManage.vue'
-import bigDataCenter from 'components/bigDataCenter.vue'
-import fullMediaEdit from 'components/fullMediaEdit.vue'
-import mediaPropagation from 'components/mediaPropagation.vue'
-import monitorDisposal from 'components/monitorDisposal.vue'
-import teamManage from 'components/teamManage.vue'
 import { mapGetters } from 'vuex'
 export default {
   name: 'app',
@@ -34,7 +20,6 @@ export default {
   },
   data() {
     return {
-      menuName: 'home'
     }
   },
   mounted() {
@@ -51,14 +36,10 @@ export default {
       const localStorageCls = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'red'
       target.className = this.themeCls ? 'theme-' + this.themeCls
                                   : `theme-${localStorageCls}`
-    },
-    fromChild(val) {
-      this.menuName = val
     }
   },
   components: {
-    HeaderWrap,
-    home, backstageManage, bigDataCenter, fullMediaEdit, mediaPropagation, monitorDisposal, teamManage
+    HeaderWrap
   }
 }
 </script>
@@ -69,6 +50,7 @@ export default {
   }
   .el-container {
     height:100vh;
+    border-top: 1px solid #104865;
   }
   .el-aside {
     background-color: #383a6a;

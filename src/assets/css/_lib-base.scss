@@ -60,22 +60,23 @@ body {
 // placeholder 样式
 input::-webkit-input-placeholder {
   /* WebKit browsers */
-  color: #b8d7ff!important
+  color: #ccc!important;
+  font-size:12px;
 }
 
 input:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #b8d7ff!important
+  color: #ccc!important
 }
 
 input::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #b8d7ff!important
+  color: #ccc!important
 }
 
 input:-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  color: #b8d7ff!important
+  color: #ccc!important
 }
 
 // 滚动条

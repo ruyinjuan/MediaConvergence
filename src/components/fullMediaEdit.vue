@@ -1,16 +1,23 @@
 <template>
-    <div class="left-wrap">
-      <el-menu
-        default-active="2"
-        class="el-menu-vertical-demo"
-        @open="handleOpen"
-        @close="handleClose">
-        <el-menu-item index="3">
-          <i class="el-icon-document"></i>
-          <span slot="title">导航三</span>
-        </el-menu-item>
-      </el-menu>
-    </div>
+  <el-container>
+    <el-aside width="200px">
+      <div class="left-wrap">
+        <el-menu
+          default-active="2"
+          class="el-menu-vertical-demo"
+          @open="handleOpen"
+          @close="handleClose">
+          <el-menu-item index="3">
+            <i class="el-icon-document"></i>
+            <span slot="title">导航三</span>
+          </el-menu-item>
+        </el-menu>
+      </div>
+    </el-aside>
+    <el-main>
+      <router-view/>
+    </el-main>
+  </el-container>
 </template>
 
 <script type="text/javascript">

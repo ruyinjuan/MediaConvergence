@@ -29,6 +29,7 @@
   border-bottom: 4px solid #265990;
 }
 .el-menu--horizontal>.el-submenu .el-submenu__title{
+  background:none;
   color:#fff;
 }
 .el-menu--horizontal>.el-submenu:focus .el-submenu__title, .el-menu--horizontal>.el-submenu:hover .el-submenu__title {
@@ -62,4 +63,39 @@
 }
 .el-submenu .el-menu {
   margin: 5px 0;
+}
+.el-breadcrumb {
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 25px;
+  background: #393b6a;
+}
+.el-breadcrumb__inner a, .el-breadcrumb__inner.is-link{
+  color:#fff;
+  font-weight:300;
+}
+.el-breadcrumb__separator{
+  color:#fff;
+}
+.el-breadcrumb__inner{
+  color:#fff;
+}
+.el-breadcrumb__item:last-child .el-breadcrumb__inner, .el-breadcrumb__item:last-child .el-breadcrumb__inner a, .el-breadcrumb__item:last-child .el-breadcrumb__inner a:hover, .el-breadcrumb__item:last-child .el-breadcrumb__inner:hover{
+  color:#fff;
+}
+.el-pagination{
+  margin: 20px 0;
+  float: right;
+}
+.el-date-editor.el-input, .el-date-editor.el-input__inner{
+  width:160px;
+}
+.el-input__inner{
+  height:35px;
+  line-height:35px;
+  border-radius: 0;
+}
+.el-input__icon{
+  line-height:35px;
 }
