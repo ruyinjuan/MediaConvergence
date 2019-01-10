@@ -1,56 +1,50 @@
 <template>
+
   <el-container>
     <el-aside width="200px">
       <div class="left-wrap">
-        <el-menu
-          default-active="2"
-          class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose">
+        <el-menu default-active="1-1" class="leftmenubox">
           <el-submenu index="1">
             <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>导航一</span>
+              <i class="iconfont icon-gaojian"></i>
+              <span slot="title">绩效考核</span>
             </template>
             <el-menu-item index="1-1">
-              <router-link class="item" tag="li" :to="{name:'home'}">首页</router-link>
+              <router-link class="item" :to="{path:'/teamManage/zongtikaohe'}">总体考核</router-link>
             </el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
-            <el-menu-item index="1-3">选项3</el-menu-item>
-            <el-submenu index="1-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="1-4-1">选项1</el-menu-item>
-            </el-submenu>
+            <el-menu-item index="1-2">
+              <router-link class="item" :to="{path:'/teamManage/weixinkaohe'}">微信考核</router-link>
+            </el-menu-item>
+            <el-menu-item index="1-3">
+              <router-link class="item" :to="{path:'/teamManage/weibokaohe'}">微博考核</router-link>
+            </el-menu-item>
+            <el-menu-item index="1-4">
+              <router-link class="item" :to="{path:'/teamManage/menhukaohe'}">门户网站考核</router-link>
+            </el-menu-item>
+            <el-menu-item index="1-5">
+              <router-link class="item" :to="{path:'/teamManage/qinmiandukaohe'}">系统勤勉度考核</router-link>
+            </el-menu-item>
+            <el-menu-item index="1-6">
+              <router-link class="item" :to="{path:'/teamManage/xinmeitibangdan'}">新媒体榜单</router-link>
+            </el-menu-item>
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">
-              <i class="el-icon-menu"></i>
-              <span slot="title">导航二</span>
+              <i class="iconfont icon-zixun"></i>
+              <span slot="title">通讯录</span>
             </template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
+            <el-menu-item index="2-1">
+              <router-link class="item" :to="{path:'/teamManage/tongxunlu'}">通讯录</router-link>
+            </el-menu-item>
           </el-submenu>
-          <el-menu-item index="3">
-            <i class="el-icon-document"></i>
-            <span slot="title">导航三</span>
-          </el-menu-item>
-          <el-menu-item index="4">
-            <i class="el-icon-setting"></i>
-            <span slot="title">导航四</span>
-          </el-menu-item>
-          <el-submenu index="5">
+          <el-submenu index="3">
             <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>导航五</span>
+              <i class="iconfont icon-zixun"></i>
+              <span slot="title">媒体记者</span>
             </template>
-            <el-menu-item index="5-1">选项1</el-menu-item>
-            <el-menu-item index="5-2">选项2</el-menu-item>
-            <el-menu-item index="5-3">选项3</el-menu-item>
-            <el-submenu index="5-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="5-4-1">选项1</el-menu-item>
-            </el-submenu>
+            <el-menu-item index="3-1">
+              <router-link class="item" :to="{path:'/teamManage/meitijizhe'}">媒体记者</router-link>
+            </el-menu-item>
           </el-submenu>
         </el-menu>
       </div>
@@ -77,29 +71,10 @@
 <style lang="scss" scoped>
   @import "~assets/css/lib-variable";
   @import "~assets/css/lib-mixin";
-  .header-wrap{
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #191a2c;
-    ul{
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      li{
-        color: $cl-txt;
-        height:56px;
-        line-height:56px;
-        padding: 0 20px;
-        cursor: pointer;
-        font-weight:bold;
-        &.active{
-          background:#262f50;
-          border-bottom:4px solid #2a578e;
-        }
-      }
-    }
 
+  .leftmenubox a{
+    color:#fff;
+    display:block;
   }
 </style>
 

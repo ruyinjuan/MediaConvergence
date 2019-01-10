@@ -7,39 +7,39 @@
           <p><span>新闻中心融媒体平台</span></p>
         </div>
       </div>
-      <el-menu class="menubox" mode="horizontal" @select="handleSelect">
+      <el-menu class="menubox" mode="horizontal">
         <el-menu-item index="1">
-          <router-link class="item" :to="{name:'home'}"><div v-on:click="toParent('home')">首页</div></router-link>
+          <router-link class="item" :to="{path:'home'}">首页</router-link>
         </el-menu-item>
         <el-menu-item index="2">
-          <router-link class="item" :to="{name:'fullMediaEdit'}"><div v-on:click="toParent('fullMediaEdit')">全媒体编辑</div></router-link>
+          <router-link class="item" :to="{path:'fullMediaEdit'}">全媒体编辑</router-link>
         </el-menu-item>
         <el-submenu index="3">
           <template slot="title">舆情监测处置</template>
           <el-menu-item index="3-1">
-            <router-link class="item" :to="{name:'monitorDisposal'}"><div v-on:click="toParent('monitorDisposal')">舆情监测</div></router-link>
+            <router-link class="item" :to="{path:'monitorDisposal'}">舆情监测</router-link>
           </el-menu-item>
           <el-menu-item index="3-2">
-            <router-link class="item" :to="{name:'monitorDisposal'}"><div v-on:click="toParent('monitorDisposal')">舆情处置</div></router-link>
+            <router-link class="item" :to="{path:'monitorDisposal'}">舆情处置</router-link>
           </el-menu-item>
         </el-submenu>
         <el-menu-item index="4">
-          <router-link class="item" :to="{name:'bigDataCenter'}"><div v-on:click="toParent('bigDataCenter')">大数据中心</div></router-link>
+          <router-link class="item" :to="{path:'/bigDataCenter/rongmeidating'}">大数据中心</router-link>
         </el-menu-item>
         <el-menu-item index="5">
-          <router-link class="item" :to="{name:'mediaPropagation'}"><div v-on:click="toParent('mediaPropagation')">融媒传播力</div></router-link>
+          <router-link class="item" :to="{path:'mediaPropagation'}">融媒传播力</router-link>
         </el-menu-item>
         <el-menu-item index="6">
-          <router-link class="item" :to="{name:'teamManage'}"><div v-on:click="toParent('teamManage')">队伍管理</div></router-link>
+          <router-link class="item" :to="{path:'/teamManage/zongtikaohe'}">队伍管理</router-link>
         </el-menu-item>
       </el-menu>
       <div class="headrightbox">
         <div class="btnbox">
-          <router-link class="item-btn btn-manage" :to="{name:'backstageManage'}"><div v-on:click="toParent('backstageManage')"><i class="iconfont icon-xinxinicon"></i>后台管理</div></router-link>
-          <router-link class="item-btn btn-tougao" :to="{name:'backstageManage'}"><div v-on:click="toParent('submission')"><i class="iconfont icon-bianji"></i>我要投稿</div></router-link>
+          <router-link class="item-btn btn-manage" :to="{path:'/system/dept'}"><i class="iconfont icon-xinxinicon"></i></router-link>
+          <router-link class="item-btn btn-tougao" :to="{path:'backstageManage'}"><i class="iconfont icon-bianji"></i>我要投稿</router-link>
         </div>
         <div class="userbox">
-          <img class="headimg" src=""/>
+          <img class="headimg" src="../assets/imgs/img.jpg"/>
           <span>数据分析师</span>
         </div>
         <div class="closebox">
@@ -53,9 +53,6 @@
 
   export default {
     methods: {
-      toParent(val) {
-        this.$emit('fromChild', val)
-      }
     }
   }
 </script>
@@ -137,11 +134,15 @@
           opacity:0.9;
         }
         .btn-manage{
-          background:#bc8dee;
+          background: #bc8dee;
           margin-left: 20px;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          border-radius: 100%;
+          margin-top: 14px;
           i.icon-xinxinicon{
             float: left;
-            margin-left: 3px;
             margin-right: -10px;
           }
         }

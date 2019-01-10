@@ -1,5 +1,4 @@
 <template>
-
   <el-container>
     <el-aside width="200px">
       <div class="left-wrap">
@@ -7,31 +6,22 @@
           <el-submenu index="1">
             <template slot="title">
               <i class="iconfont icon-gaojian"></i>
-              <span slot="title">大数据云平台</span>
+              <span slot="title">系统管理</span>
             </template>
             <el-menu-item index="1-1">
-              <router-link class="item" :to="{path:'/bigDataCenter/rongmeidating'}">融媒体大厅</router-link>
+              <router-link class="item" :to="{path:'/system/dept'}">部门管理</router-link>
             </el-menu-item>
             <el-menu-item index="1-2">
-              <router-link class="item" :to="{path:'/bigDataCenter/quanshidongtai'}">全市动态</router-link>
+              <router-link class="item" :to="{path:'/system/role'}">角色管理</router-link>
             </el-menu-item>
             <el-menu-item index="1-3">
-              <router-link class="item" :to="{path:'/bigDataCenter/yuedupaihang'}">月度数据排行</router-link>
+              <router-link class="item" :to="{path:'/system/user'}">用户管理</router-link>
             </el-menu-item>
             <el-menu-item index="1-4">
-              <router-link class="item" :to="{path:'/bigDataCenter/xinmeitipaihang'}">新媒体数据排行榜</router-link>
+              <router-link class="item" :to="{path:'/system/account'}">账号管理</router-link>
             </el-menu-item>
-          </el-submenu>
-          <el-submenu index="2">
-            <template slot="title">
-              <i class="iconfont icon-zixun"></i>
-              <span slot="title">优秀成果作品</span>
-            </template>
-            <el-menu-item index="2-1">
-              <router-link class="item" :to="{path:'/bigDataCenter/chengguotupian'}">图片</router-link>
-            </el-menu-item>
-            <el-menu-item index="2-2">
-              <router-link class="item" :to="{path:'/bigDataCenter/chengguoshipin'}">视频</router-link>
+            <el-menu-item index="1-5">
+              <router-link class="item" :to="{path:'/system/operate'}">操作日志</router-link>
             </el-menu-item>
           </el-submenu>
         </el-menu>

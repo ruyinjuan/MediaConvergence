@@ -3,7 +3,7 @@
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ path: '/bigDataCenter' }">大数据中心</el-breadcrumb-item>
       <el-breadcrumb-item>大数据云平台</el-breadcrumb-item>
-      <el-breadcrumb-item>融媒体大厅</el-breadcrumb-item>
+      <el-breadcrumb-item>全市动态</el-breadcrumb-item>
     </el-breadcrumb>
     <div class="main-wrap">
       <div class="clearfix search-wrap">
@@ -13,8 +13,28 @@
           <a>微博文章</a>
         </div>
         <div class="fr search-box">
+          <el-form :inline="true" :model="formInfo" class="demo-form-inline fl datepicker">
+            <el-form-item label="检察院选择">
+              <el-select v-model="formInfo.jianchayuan" placeholder="全部">
+                <el-option label="全部" value="0"></el-option>
+                <el-option label="检察院1" value="1"></el-option>
+                <el-option label="检察院2" value="2"></el-option>
+              </el-select>
+              <el-select v-model="formInfo.jianchayuan2" placeholder="- -">
+                <el-option label="全部" value="0"></el-option>
+                <el-option label="检察院1" value="1"></el-option>
+                <el-option label="检察院2" value="2"></el-option>
+              </el-select>
+            </el-form-item>
+            <el-form-item prop="type">
+              <el-checkbox-group v-model="formInfo.type">
+                <el-checkbox label="包含本院" name="type"></el-checkbox>
+              </el-checkbox-group>
+            </el-form-item>
+          </el-form>
           <input type="search" class="input-search" placeholder="支持模糊查询..."/>
           <button type="button" class="btn btn-search"><i class="iconfont icon-chaxun"></i>查询</button>
+          <button type="button" class="btn btn-export"><i class="iconfont icon-tubiao05"></i>导出</button>
         </div>
       </div>
       <div class="clearfix datalist-box">
@@ -132,7 +152,11 @@
      name: 'bigDataCenter',
      data() {
       return {
-        dialogVisible: false
+        formInfo: {
+          jianchayuan: '0',
+          jianchayuan2: '0',
+          type: ''
+        }
       };
     },
   }
@@ -155,12 +179,15 @@
     padding-bottom:10px;
     border-bottom:1px solid #e3e3e3;
     .search-box{
+      .el-form-item{
+        margin-bottom:0;
+      }
       .datetitle{
         line-height:35px;
         margin-right:10px;
       }
       .datepicker{
-        margin-right:48px;
+        margin-right:40px;
       }
       .input-search{
         float:left;
